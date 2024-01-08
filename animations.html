@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;   
+            width: 100vw;
+            border: 5px solid brown;
+            background-color: beige;
+            
+        }
+        .box{
+            height: 80px;
+            width: 200px;
+            background-color: blue;
+            margin: 10px;
+            position: relative;
+            border:3px solid black;
+            border-radius: 5px;
+            animation-name: rightMovement;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-direction: alternate;
+        }
+        @keyframes rightMovement{
+            from{
+                top:0px;
+                left: 0px;
+            }
+            to{
+                top: 0px;
+                left: 1300px;
+            }
+            
+        }
+        .text{
+           border-radius: 4px;
+           font-size: 25px;
+            
+            background-color: yellow;
+        }
+        #box2{
+            height: 80px;
+            width: 200px;
+            background-color: blue;
+            margin: 10px;
+            position: relative;
+            border:3px solid black;
+            border-radius: 5px;
+            animation-name: leftMovement;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-direction: alternate;
+        }
+        @keyframes leftMovement{
+            from{
+                top:500px;
+                left: 1300px;
+            }
+            to{
+                top: 500px;
+                left: 0px;
+            }            
+        }
+        #circle{
+            width: 80px;
+            height: 80px;
+            margin: 10px ;
+            position: relative;
+            background-color: blue;
+            border: 3px solid black;
+            
+            border-radius: 40px;
+            /* @keyframes duration | easing-function | delay |
+            iteration-count | direction | fill-mode | play-state | name */
+            top: 30%;
+            left: 40%;
+            animation: 15s linear 0s infinite alternate-reverse none running circleMovement;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        @keyframes circleMovement{
+            0%{
+                top: 1%;
+                left: 0%;
+            }
+            30%{
+                top: 5%;
+                left: 90%;
+            }
+            60%{
+                top: 40%;
+                left: 0%;
+            }   
+            100%{
+                top: 40%;
+                left: 90%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="text">
+                <p>Nitai Gaur Premanande!</p>
+            </div>
+        </div>
+
+        <div id="box2">
+            <div class="text">
+                <p>Nitai Gaur Premanande!</p>
+            </div>
+        </div>
+        <div id="circle">
+            <p class="text">Haribol</p>
+        </div>
+    </div>
+</body>
+</html>
